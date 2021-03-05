@@ -52,7 +52,8 @@ SRC1 = ft_memset.c \
 	ft_strjoin_f.c \
 	ft_filetrim.c \
 	ft_filerep.c \
-	ft_filebordertrim.c
+	ft_filebordertrim.c \
+	ft_error.c
 SRC2 = ft_lstnew_bonus.c \
         ft_lstadd_front_bonus.c \
         ft_lstsize_bonus.c \

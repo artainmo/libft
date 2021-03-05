@@ -87,5 +87,6 @@ char            *ft_strjoin_f(char *s1, char const *s2);
 int            ft_file_trim(char *filename, char trim);
 int ft_file_rep(char *filename, char trim, char replace);
 int ft_filebordertrim(char *filename, char *trim);
+void ft_error(char *text);
 
 #endif
