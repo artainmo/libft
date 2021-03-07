@@ -58,10 +58,8 @@ int			ft_atoi(const char *str)
 		res = res * -1;
 	if (c > 1)
 		return (0);
-	if (res < 9223372036854775807 && res > 2147483647)
+	else if (res > 2147483647 || res < -2147483648)
 		return (0);
-	else if (res > -9223372036854775807 && res < -2147483648)
-		return (-1);
 	else
 		return (res);
 }

@@ -54,7 +54,6 @@ SRCSC	= ft_memset.c \
 					ft_filerep.c \
 					ft_filebordertrim.c \
 					ft_error.c
-
 SBONUS = ft_lstnew_bonus.c \
 	        ft_lstadd_front_bonus.c \
 	        ft_lstsize_bonus.c \
@@ -64,22 +63,14 @@ SBONUS = ft_lstnew_bonus.c \
 	        ft_lstclear_bonus.c \
 	        ft_lstiter_bonus.c \
 	        ft_lstmap_bonus.c
-
 SRCSH	= libft.h
-
 OBJS	= $(SRCSC:%.c=%.o)
-
 OBONUS	= $(SBONUS:%.c=%.o)
-
 NAME	= libft.a
-
 CC	= gcc
-
 AR	= ar rc
-
 RM	= rm -f
-
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 $(NAME):	${OBJS}
 			${AR} ${NAME} ${OBJS} ${SRCSH}
