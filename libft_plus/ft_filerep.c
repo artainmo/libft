@@ -12,28 +12,28 @@
 
 #include "libft.h"
 
-int ft_file_rep(char *filename, char trim, char replace)
+int	ft_file_rep(char *filename, char trim, char replace)
 {
-    int ret;
-    int fd;
-    char buffer[2];
-    char *new_file;
-    
-    new_file = NULL;
-    if ((fd = open(filename, O_RDWR, 0666)) == -1)
-        return (0);
-    while ((ret = read(fd, buffer, 1)))
-    {
-        buffer[1] = '\0';
-        if (buffer[0] == trim)
-            buffer[0] = replace;
-        if (!(new_file = ft_strjoin_f(new_file, buffer)))
-            return (0);
-        if (ret == -1)
-            return (0);
-    }
-    fd = open(filename, O_RDWR | O_TRUNC, 0666);
-    write(fd, new_file, ft_strlen(new_file));
-    close(fd);
-    return (1);
+	int		ret;
+	int		fd;
+	char	buffer[2];
+	char	*new_file;
+
+	new_file = NULL;
+	if ((fd = open(filename, O_RDWR, 0666)) == -1)
+		return (0);
+	while ((ret = read(fd, buffer, 1)))
+	{
+		buffer[1] = '\0';
+		if (buffer[0] == trim)
+			buffer[0] = replace;
+		if (!(new_file = ft_strjoin_f(new_file, buffer)))
+			return (0);
+		if (ret == -1)
+			return (0);
+	}
+	fd = open(filename, O_RDWR | O_TRUNC, 0666);
+	write(fd, new_file, ft_strlen(new_file));
+	close(fd);
+	return (1);
 }

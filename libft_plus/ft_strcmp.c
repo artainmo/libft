@@ -18,13 +18,13 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	unsigned int i;
-	unsigned int n;
-    unsigned int m;
+	unsigned int	i;
+	unsigned int	n;
+	unsigned int	m;
 
 	i = 0;
 	n = ft_strlen(s2);
-    m = ft_strlen(s1);
+	m = ft_strlen(s1);
 	while ((unsigned char)s1[i] == (unsigned char)s2[i] && s1[i] && s2[i])
 		i++;
 	if (n == i && m == i)

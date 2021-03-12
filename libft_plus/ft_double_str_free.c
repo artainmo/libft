@@ -9,20 +9,21 @@
 /*   Updated: 2020/02/17 15:00:43 by artainmo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void double_str_free(char **str)
+void	double_str_free(char **str)
 {
-    int i;
-    
-    i = 0;
-    if (str)
-    {
-        while(str[i])
-        {
-            free(str[i]);
-            i++;
-        }
-    }
-    free(str);
+	int	i;
+
+	i = 0;
+	if (str)
+	{
+		while (str[i])
+		{
+			free(str[i]);
+			i++;
+		}
+	}
+	free(str);
 }

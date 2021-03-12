@@ -13,19 +13,21 @@
 #include "libft.h"
 
 /*
-** Searches the last occurence of the character c in the string s. Returns -1 if not found otherwise it
+** Searches the last occurence of the character c in the string s.
+** Returns -1 if not found otherwise it
 ** returns the index in the string the last char occurence is at.
 */
-int ft_strrchr_m(char *s, int c)
+
+int	ft_strrchr_m(char *s, int c)
 {
 	int i;
 
-    i = ft_strlen(s);
+	i = ft_strlen(s);
 	while (s && s[i])
 	{
-        if (s[i] == c)
-            return (i);
+		if (s[i] == c)
+			return (i);
 		i--;
 	}
-    return (-1);
+	return (-1);
 }

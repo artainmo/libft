@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-int ft_count_words(char **double_str)
+int	ft_count_words(char **double_str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!double_str)
 		return (0);
-	while(double_str[i])
+	while (double_str[i])
 		i++;
 	return (i);
 }

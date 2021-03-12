@@ -80,14 +80,14 @@ int				ft_count_b_zeros(char *str);
 char			*ft_dec_to_hexa(unsigned long s);
 int				ft_abs(int a);
 double			ft_atof(char *s);
-void            double_str_free(char **str);
-int             ft_strrchr_m(char *s, int c);
-int             ft_count_words(char **double_str);
+void			double_str_free(char **str);
+int				ft_strrchr_m(char *s, int c);
+int				ft_count_words(char **double_str);
 void			ft_printf_ds(char **str);
-char            *ft_strjoin_f(char *s1, char const *s2);
-int            ft_file_trim(char *filename, char trim);
-int ft_file_rep(char *filename, char trim, char replace);
-int ft_filebordertrim(char *filename, char *trim);
-void ft_error(char *text);
+char			*ft_strjoin_f(char *s1, char const *s2);
+int				ft_file_trim(char *filename, char trim);
+int				ft_file_rep(char *filename, char trim, char replace);
+int				ft_filebordertrim(char *filename, char *trim);
+void			ft_error(char *text);
 
 #endif

@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_isdigit(int c)
 {
@@ -27,12 +26,12 @@ int	ft_str_isdigit(char *str)
 
 	i = 0;
 	if (str == 0)
-		return 1;
-	while(str[i] != 0)
+		return (1);
+	while (str[i] != 0)
 	{
 		if (!ft_isdigit(str[i]) && (str[i] != '-' || ft_strlen(str) == 1))
-			return 0;
+			return (0);
 		i++;
 	}
-	return 1;
+	return (1);
 }
