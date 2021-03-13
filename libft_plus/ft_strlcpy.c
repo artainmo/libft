@@ -15,10 +15,8 @@
 unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size)
 {
 	unsigned int i;
-	unsigned int l;
 
 	i = 0;
-	l = 0;
 	if (size == 0)
 		return (ft_strlen(src));
 	else
