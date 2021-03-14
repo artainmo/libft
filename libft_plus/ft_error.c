@@ -15,5 +15,6 @@
 void	ft_error(char *text)
 {
 	write(2, text, ft_strlen(text));
+	write(2, "\n", 1);
 	exit(1);
 }
