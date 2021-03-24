@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_count_words.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: artainmo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/12 01:55:33 by artainmo          #+#    #+#             */
-/*   Updated: 2019/08/13 21:13:44 by artainmo         ###   ########.fr       */
+/*   Created: 2020/02/23 18:06:13 by artainmo          #+#    #+#             */
+/*   Updated: 2020/02/23 18:08:19 by artainmo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+char	*ft_cut_f(char *str, int len)
 {
-	int i;
+	char	*ret;
+	int		i;
 
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (len < 1 || str == 0)
+		return (0);
+	if ((ret = ft_substr(str, len, ft_strlen(str))) == 0)
+		return (0);
+	free(str);
+	return (ret);
 }

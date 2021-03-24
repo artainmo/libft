@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: artainmo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/12 10:37:42 by artainmo          #+#    #+#             */
-/*   Updated: 2021/03/12 10:37:42 by artainmo         ###   ########.fr       */
+/*   Created: 2020/01/19 09:34:03 by artainmo          #+#    #+#             */
+/*   Updated: 2020/01/19 09:34:42 by artainmo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_error(char *text)
+/*
+** Returns zero if not same and one if same
+*/
+
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	write(2, text, ft_strlen(text));
-	write(2, "\n", 1);
-	exit(1);
+	unsigned int	i;
+	unsigned int	n;
+	unsigned int	m;
+
+	i = 0;
+	if (s1 == 0 || s2 == 0)
+		return (0);
+	n = ft_strlen(s2);
+	m = ft_strlen(s1);
+	while ((unsigned char)s1[i] == (unsigned char)s2[i] && s1[i] && s2[i])
+		i++;
+	if (n == i && m == i)
+		return (1);
+	else
+		return (0);
 }
