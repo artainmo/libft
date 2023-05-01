@@ -18,6 +18,8 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
+# include <string.h>
+# include <errno.h>
 
 typedef struct	s_list
 {
@@ -89,6 +91,8 @@ int				ft_file_trim(char *filename, char trim);
 int				ft_file_rep(char *filename, char trim, char replace);
 int				ft_filebordertrim(char *filename, char *trim);
 void			ft_error(char *text);
+void			ft_errno(void);
+void			ft_malloc_error(void);
 char			*ft_cut_f(char *str, int len);
 
 #endif
