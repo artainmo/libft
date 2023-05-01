@@ -74,7 +74,7 @@ RM	= rm -f
 CFLAGS = -Wall -Wextra -Werror
 
 $(NAME):	${OBJS}
-			${AR} ${NAME} ${OBJS} ${SRCSH}
+			${AR} ${NAME} ${OBJS}
 
 all:	${NAME}
 
