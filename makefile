@@ -54,7 +54,8 @@ SRCSC	= ft_memset.c \
 					ft_filerep.c \
 					ft_filebordertrim.c \
 					ft_error.c \
-					ft_cut.c
+					ft_cut.c \
+					ft_add_end_ds.c
 SBONUS = ft_lstnew_bonus.c \
 	        ft_lstadd_front_bonus.c \
 	        ft_lstsize_bonus.c \
