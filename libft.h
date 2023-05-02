@@ -94,5 +94,6 @@ void			ft_error(char *text);
 void			ft_errno(void);
 void			ft_malloc_error(void);
 char			*ft_cut_f(char *str, int len);
+char			**add_end_ds(char **ds, char *add);
 
 #endif
