@@ -66,3 +66,15 @@ int			ft_round(double d)
 	i = ft_ftoi(s);
 	return (i);
 }
+
+int ft_round_up(float x) 
+{
+    int res;
+
+    if (x >= 0.0) {
+        res = (int)(x + 0.5);
+    } else {
+        res = (int)(x - 0.5);
+    }
+    return res;
+}
