@@ -47,3 +47,31 @@ char		*ft_strjoin_f(char *s1, char const *s2)
 	free(s1);
 	return (str);
 }
+
+char		*ft_strjoin_df(char *s1, char const *s2)
+{
+	char	*str;
+	int		i;
+	int		l;
+
+	i = 0;
+	l = 0;
+	if (!s1 && !s2)
+		return (0);
+	if (!s1)
+		return (ft_strdup(s2));
+	if (!s2)
+		return (s1);
+	if (!(str = malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1))))
+		return (0);
+	ft_cat(s1, str, &i);
+	while (s2[l])
+	{
+		str[i + l] = s2[l];
+		l++;
+	}
+	str[i + l] = '\0';
+	free(s1);
+	free(s2);
+	return (str);
+}
