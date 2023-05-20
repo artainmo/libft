@@ -21,7 +21,7 @@ static void	ft_cat(char const *s1, char *str, int *i)
 	}
 }
 
-char		*ft_strjoin_f(char *s1, char const *s2)
+char		*ft_strjoin_f(char *s1, char *s2)
 {
 	char	*str;
 	int		i;
@@ -48,7 +48,7 @@ char		*ft_strjoin_f(char *s1, char const *s2)
 	return (str);
 }
 
-char		*ft_strjoin_df(char *s1, char const *s2)
+char		*ft_strjoin_df(char *s1, char *s2)
 {
 	char	*str;
 	int		i;
