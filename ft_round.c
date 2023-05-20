@@ -67,14 +67,14 @@ int			ft_round(double d)
 	return (i);
 }
 
-int ft_round_up(float x) 
+int ft_round_up(float x)
 {
     int res;
 
     if (x >= 0.0) {
-        res = (int)(x + 0.5);
+        res = ft_round(x + 0.5);
     } else {
-        res = (int)(x - 0.5);
+        res = ft_round(x - 0.5);
     }
     return res;
 }
