@@ -79,7 +79,7 @@ char			*ft_last_decf(char *str);
 char			*ft_ftoa(double f, int precision);
 int				ft_count_b_zeros(char *str);
 
-char			*ft_dec_to_hexa(unsigned long s);
+char			*ft_dec_to_hex(unsigned long s);
 int				ft_abs(int a);
 double			ft_atof(char *s);
 void			double_str_free(char **str);
