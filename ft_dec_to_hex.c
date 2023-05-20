@@ -43,7 +43,7 @@ static void	ft_norm(int *remainder, unsigned long *s, int *i, char *temp_rev)
 	*s = *s / 16;
 }
 
-char		*ft_dec_to_hexa(unsigned long s)
+char		*ft_dec_to_hex(unsigned long s)
 {
 	char	*hexadecimal;
 	char	*temp_rev;
