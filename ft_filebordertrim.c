@@ -25,7 +25,7 @@ int	ft_filebordertrim(char *filename, char *trim)
 	while ((ret = read(fd, buffer, 1)))
 	{
 		buffer[1] = '\0';
-		if (!(new_file = ft_strjoin_f(new_file, buffer)))
+		if (!(new_file = ft_strjoin_f(new_file, buffer, 1)))
 			return (0);
 		if (ret == -1)
 			return (0);
