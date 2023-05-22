@@ -27,7 +27,7 @@ int	ft_file_rep(char *filename, char trim, char replace)
 		buffer[1] = '\0';
 		if (buffer[0] == trim)
 			buffer[0] = replace;
-		if (!(new_file = ft_strjoin_f(new_file, buffer)))
+		if (!(new_file = ft_strjoin_f(new_file, buffer, 1)))
 			return (0);
 		if (ret == -1)
 			return (0);
