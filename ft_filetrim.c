@@ -27,7 +27,7 @@ int	ft_file_trim(char *filename, char trim)
 		buffer[1] = '\0';
 		if (buffer[0] != trim)
 		{
-			if (!(new_file = ft_strjoin_f(new_file, buffer)))
+			if (!(new_file = ft_strjoin_f(new_file, buffer, 1)))
 				return (0);
 		}
 		if (ret == -1)
