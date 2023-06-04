@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_ds.c                                     :+:      :+:    :+:   */
+/*   ft_print_ds.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: artainmo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_printf_ds(char **str)
+void	ft_print_ds(char **str)
 {
 	int i;
 
@@ -23,3 +23,4 @@ void	ft_printf_ds(char **str)
 		i++;
 	}
 }
+
