@@ -6,7 +6,7 @@
 /*   By: artainmo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/23 20:18:40 by artainmo          #+#    #+#             */
-/*   Updated: 2019/11/23 20:56:47 by artainmo         ###   ########.fr       */
+/*   Updated: 2019/11/29 18:28:44 by artainmo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,22 @@
 /*
 **Converts a decimal(10-base) into a hexadecimal(16-base),
 **and puts the hexadecimal into a string,
-**checks the precision flags and adds 0s in the string accordingly
+**Prepends with zeros to have a minimal length of 8
+**Initially comes from my ft_printf however modifs have been added
 */
+
+static char *min_len(char *s)
+{
+	int len = ft_strlen(s);
+
+	while (len < 8)
+	{
+		if (!(s = ft_strjoin_f("0", s, 2)))
+			ft_malloc_error();
+		len++;
+	}
+	return s;
+}
 
 static int	ft_count_dec_to_hex(unsigned long i)
 {
@@ -31,14 +45,14 @@ static int	ft_count_dec_to_hex(unsigned long i)
 	return (counter);
 }
 
-static void	ft_norm(int *remainder, unsigned long *s, int *i, char *temp_rev)
+static void	ft_norm(int *r, unsigned long long int *s, int *i, char *t_r)
 {
-	*remainder = *s % 16;
-	if (*remainder < 10)
-		*remainder = *remainder + 48;
+	*r = *s % 16;
+	if (*r < 10)
+		*r = *r + 48;
 	else
-		*remainder = *remainder + 87;
-	temp_rev[*i] = *remainder;
+		*r = *r + 87;
+	t_r[*i] = *r;
 	*i = *i + 1;
 	*s = *s / 16;
 }
@@ -47,6 +61,7 @@ char		*ft_dec_to_hex(unsigned long long int s)
 {
 	char	*hexadecimal;
 	char	*temp_rev;
+	// char *ret;
 	int		i;
 	int		l;
 	int		remainder;
@@ -55,9 +70,9 @@ char		*ft_dec_to_hex(unsigned long long int s)
 	l = 0;
 	remainder = 0;
 	if (!(temp_rev = malloc(sizeof(char) * ft_count_dec_to_hex(s))))
-		return (0);
+		ft_malloc_error();
 	if (!(hexadecimal = malloc(sizeof(char) * ft_count_dec_to_hex(s))))
-		return (0);
+		ft_malloc_error();
 	while (s)
 		ft_norm(&remainder, &s, &i, temp_rev);
 	temp_rev[i] = '\0';
@@ -66,6 +81,7 @@ char		*ft_dec_to_hex(unsigned long long int s)
 		hexadecimal[l] = temp_rev[i];
 		l++;
 	}
+	free(temp_rev);
 	hexadecimal[l] = '\0';
-	return (hexadecimal);
+	return min_len(hexadecimal);
 }
