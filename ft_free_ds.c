@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	double_str_free(char **str)
+void	free_ds(char **str)
 {
 	int	i;
 
