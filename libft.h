@@ -81,10 +81,7 @@ int				ft_count_b_zeros(char *str);
 char		*ft_dec_to_hex(unsigned long long int s);
 int				ft_abs(int a);
 double			ft_atof(char *s);
-void			double_str_free(char **str);
 int				ft_strrchr_m(char *s, int c);
-int				ft_count_words(char **double_str);
-void			ft_printf_ds(char **str);
 char			*ft_strjoin_f(char *s1, char *s2, int free_);
 char			*ft_strjoin_len_f(char *s1, int len1, char *s2, int len2, int free_);
 int				ft_file_trim(char *filename, char trim);
@@ -94,7 +91,12 @@ void			ft_error(char *text);
 void			ft_errno(void);
 void			ft_malloc_error(void);
 char			*ft_cut_f(char *str, int len);
-char			**add_end_ds(char **ds, char *add);
 int 			ft_round_up(float x);
+
+void			ft_print_ds(char **str);
+char			**add_end_ds(char **ds, char *add);
+char			**remove_begin_ds(char **ds);
+void 			free_ds(char **str);
+int				ft_len_ds(char **double_str);
 
 #endif
