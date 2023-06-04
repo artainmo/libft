@@ -14,7 +14,7 @@ char **add_end_ds(char **ds, char *add)
       return 0;
     new[1] = 0;
   } else {
-    if (!(new = malloc(sizeof(char *) * (ft_count_words(ds) + 2))))
+    if (!(new = malloc(sizeof(char *) * (ft_len_ds(ds) + 2))))
       return 0;
     while (ds[i])
     {
@@ -26,6 +26,6 @@ char **add_end_ds(char **ds, char *add)
       return 0;
     new[++i] = 0;
   }
-  double_str_free(ds);
+  free_ds(ds);
   return new;
 }
