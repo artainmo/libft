@@ -45,9 +45,6 @@ SRCSC	= ft_memset.c \
 	        ft_putnbr_fd.c \
 	        ft_split.c \
 					ft_strcmp.c \
-					ft_double_str_free.c \
-					ft_printf_ds.c \
-					ft_count_words.c \
 					ft_strrchr_m.c \
 					ft_strjoin_f.c \
 					ft_filetrim.c \
@@ -56,6 +53,10 @@ SRCSC	= ft_memset.c \
 					ft_error.c \
 					ft_cut.c \
 					ft_add_end_ds.c \
+					ft_remove_begin_ds.c \
+					ft_print_ds.c \
+					ft_free_ds.c \
+					ft_len_ds.c \
 					ft_round.c \
 					ft_dec_to_hex.c
 SBONUS = ft_lstnew_bonus.c \
