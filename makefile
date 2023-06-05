@@ -58,7 +58,8 @@ SRCSC	= ft_memset.c \
 					ft_free_ds.c \
 					ft_len_ds.c \
 					ft_round.c \
-					ft_dec_to_hex.c
+					ft_dec_to_hex.c \
+					ft_strrev.c
 SBONUS = ft_lstnew_bonus.c \
 	        ft_lstadd_front_bonus.c \
 	        ft_lstsize_bonus.c \
